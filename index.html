@@ -1,1 +1,125 @@
-index
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eliminación de cuenta – nocol</title>
+  <meta name="description" content="Cómo solicitar la eliminación de tu cuenta y datos en la app nocol." />
+  <style>
+    :root {
+      --bg: #0f172a; /* slate-900 */
+      --card: #111827; /* gray-900 */
+      --muted: #94a3b8; /* slate-400 */
+      --text: #e5e7eb; /* gray-200 */
+      --accent: #22c55e; /* green-500 */
+      --border: #1f2937; /* gray-800 */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      background: radial-gradient(1200px 800px at 10% 10%, #0b1324 20%, var(--bg)), var(--bg);
+      color: var(--text);
+    }
+    header {
+      padding: 48px 16px 24px;
+      text-align: center;
+    }
+    .title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 8px;
+    }
+    .subtitle { color: var(--muted); margin: 0; }
+    main { max-width: 920px; margin: 0 auto; padding: 16px; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      margin: 16px 0;
+      backdrop-filter: blur(6px);
+    }
+    h2 {
+      font-size: clamp(20px, 2.6vw, 26px);
+      margin: 0 0 10px;
+    }
+    p, li { color: #d1d5db; }
+    .steps li { margin-bottom: 8px; }
+    code { background: #111827; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); font-size: 14px; }
+    .badge { display: inline-block; padding: 4px 10px; border: 1px solid var(--border); border-radius: 9999px; font-size: 12px; color: var(--muted); }
+    footer { text-align: center; padding: 24px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">nocol · Centro de eliminación de cuentas</div>
+    <h1 class="title">Eliminación de cuenta – nocol</h1>
+    <p class="subtitle">Solicita la eliminación de tu cuenta y conoce qué datos se eliminan o se conservan.</p>
+  </header>
+  
+  <main>
+    <article class="card" id="como-solicitar">
+      <h2>1) Cómo solicitar la eliminación</h2>
+      <p>Si deseas eliminar tu cuenta de <strong>nocol</strong> y los datos asociados, sigue estos pasos:</p>
+      <ol class="steps">
+        <li>Envía un correo a <a href="mailto:swappingteam@gmail.com">swappingteam@gmail.com</a> con el asunto: <code>Eliminar cuenta</code>.</li>
+        <li>Indica el <strong>correo con el que te registraste</strong> en nocol.</li>
+        <li>Si iniciastes sesión con Google/Apple, indícalo para localizar tu perfil.</li>
+        <li>Procesaremos tu solicitud y confirmaremos la eliminación. El plazo máximo es de <strong>30 días</strong>.</li>
+      </ol>
+      <p>Para proteger tu cuenta, podemos pedir una verificación adicional antes de proceder.</p>
+    </article>
+
+    <article class="card" id="datos-que-se-eliminan">
+      <h2>2) Qué datos se eliminan</h2>
+      <ul>
+        <li>Datos de inicio de sesión (correo, hash de contraseña o identificador de acceso social).</li>
+        <li>Información básica de perfil (p. ej., nombre, foto y preferencias, si aplica).</li>
+        <li>Datos generados por el usuario dentro de la app asociados a su cuenta (si aplica).
+        </li>
+      </ul>
+    </article>
+
+    <article class="card" id="datos-que-se-conservan">
+      <h2>3) Qué datos se conservan</h2>
+      <ul>
+        <li><strong>Registros necesarios por ley</strong> (p. ej., facturación o fiscales), cuando corresponda.</li>
+        <li><strong>Datos agregados o anónimos</strong> que no permiten tu identificación (estadísticas de uso).</li>
+        <li>Copias de seguridad durante un periodo limitado hasta su rotación segura.</li>
+      </ul>
+    </article>
+
+    <article class="card" id="retencion">
+      <h2>4) Periodos de retención</h2>
+      <ul>
+        <li>Los datos eliminables se borran en un plazo de <strong>hasta 30 días</strong> desde la confirmación.</li>
+        <li>Los datos retenidos por obligación legal se conservan <strong>solo el tiempo exigido</strong> por la normativa aplicable.</li>
+        <li>Las copias de seguridad se purgan en su <strong>ciclo de retención</strong> estándar tras la eliminación.</li>
+      </ul>
+    </article>
+
+    <article class="card" id="contacto">
+      <h2>5) Contacto</h2>
+      <p>
+        Titular: <strong>nocol</strong><br/>
+        Email de soporte: <a href="mailto:swappingteam@gmail.com">swappingteam@gmail.com</a>
+      </p>
+      <p class="meta">Última actualización: 20 de agosto de 2025</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> nocol. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
